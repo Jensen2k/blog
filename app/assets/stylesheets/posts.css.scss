@@ -52,32 +52,23 @@ a:hover,
 }
 
 header {
-  width: 162px;
-  border-right: 1px solid #DDD;
-  position: fixed;
-  top: 0;
-  bottom: 0;
+  border-bottom: 1px solid #DDD;
+  margin:0px auto;
   padding: 20px 40px;
+  text-align: center;
 
-  span {
-    color: #888;
-    font-weight: 500;
-
-    &.powered-by {
-      position: absolute;
-      bottom: 30px;
-      font-size: 11px;
-    }
+  h1 {
+    margin-bottom: 5px;
   }
-
+  
   ul {
     padding: 0;
-    margin: 50px 0;
+    margin-top: 30px;
   }
 
   li {
-    margin: 0 0 3px 0;
-
+    margin: 0 10px 0px 0;
+    display: inline;
     a {
       padding: 2px 0;
       color: #888;
@@ -92,8 +83,8 @@ header {
 }
 
 #container {
-  margin-left: 243px;
-  position: relative;
+  width: 650px;
+  margin:0px auto;
 
   time {
     display: block;
@@ -579,4 +570,19 @@ nav.pagination {
   position: absolute;
   top: 200px;
   left: 0px;
+}
+
+#footer {
+  padding: 10px 0px 10px 0px;
+  text-align: center;
+  border-top: 1px solid #DDD;
+
+span {
+    color: #888;
+    font-weight: 500;
+
+    &.powered-by {
+      font-size: 11px;
+    }
+  }
 }

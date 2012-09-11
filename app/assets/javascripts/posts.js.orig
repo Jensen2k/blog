@@ -7,6 +7,9 @@
 $(function() {
 	$('.post').fitVids();
 
+<<<<<<< HEAD
+  Obtvse.renderGists('.gist-files');
+=======
   var printGist = function(gist) {
       console.log(gist.repo, ' (' + gist.description + ') :');
       console.log(gist.div);
@@ -28,7 +31,7 @@ $(function() {
   };
 
   // fetch the gists
-  $('.gist-files').each(function() {
+  $('.gist').each(function() {
     $.getGist(this.id, displayGist);
   });
 
@@ -52,4 +55,5 @@ $(function() {
 	}
     });
 
+>>>>>>> image/master
 });

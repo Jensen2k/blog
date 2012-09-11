@@ -1,6 +1,6 @@
 Obtvse::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
-
+  
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
@@ -34,4 +34,15 @@ Obtvse::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+  
+  # Set variables for the mac
+  ENV["obtvse_title"] = "Martin Jensen"    
+  ENV["obtvse_tagline"] = "Mobilutvikler med god sans for godt produkt"
+  ENV["obtvse_twitter"] = "Jensen2k"
+  ENV["obtvse_github"] = "Jensen2k"
+  
+  ENV["s3_key"] = "AKIAIOOHSPAHQYNF3VCQ"
+  ENV["s3_secret"] = "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"
+  ENV["s3_bucket"] = "jensen2k.s3.amazonaws.com"
+   
 end

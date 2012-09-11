@@ -26,24 +26,24 @@
       <% end %>
       <li><%= link_to 'rss feed', '/posts.rss' %></li>
     </ul>
-    <span class="powered-by">
-      Powered by <a href="http://github.com/natew/obtvse.git">Obtvse</a>
-      <% if is_admin? %> &nbsp;&middot;&nbsp; <a href="/admin">Admin</a><% end %>
-  </span>
 
   </header>
   <% end %>
 
   <div id="container">
-    <% unless @no_header %>
-      <time><% if @post && @post.created_at %>Posted <%= @post.created_at.to_formatted_s(:day_month_year) %><% else %><%= Time.now.to_formatted_s(:day_month_year) %><% end %></time>
-    <% end %>
+
     <div id="content">
       <% if notice %><span class="notice"><%= notice %></span><% end %>
       <%= yield %>
     </div>
   </div>
+  <div id="footer">
+        <span class="powered-by">
+      Powered by <a href="http://github.com/natew/obtvse.git">Obtvse</a>
+      <% if is_admin? %> &nbsp;&middot;&nbsp; <a href="/admin">Admin</a><% end %>
+  </span>
 
+  </div>
   <%= javascript_include_tag 'application' %>
 
   <% if CONFIG['google_analytics_id'] %>
