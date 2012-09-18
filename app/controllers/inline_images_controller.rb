@@ -12,12 +12,12 @@ class InlineImagesController < ApplicationController
     respond_to do |format|
       if @image.save 
         format.html {  
-          render :json => @image.image.url(:medium).to_json, 
+          render :json => @image.image.url(:original).to_json, 
             :content_type => 'text/html',
             :layout => false
           }
         format.json {  
-          render :json => @image.image.url(:medium).to_json			
+          render :json => @image.image.url(:original).to_json			
           }
           logger.debug "success"
       else
